@@ -21,7 +21,7 @@ def load_page(url: str):
     return html
 
 
-def scrape_page(page_contents: object) -> object:
+def scrape_page(page_contents: str) -> str:
     chicken_noodle = BeautifulSoup(page_contents, "html5lib")
 
     for script in chicken_noodle(["script", "style"]):
